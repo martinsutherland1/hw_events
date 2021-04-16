@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: space-around;
+    
+} 
+
+#header {
+    background-image: linear-gradient(#333, lightgray);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: whitesmoke;
+}
+
+h2 {
+    background-image: linear-gradient(#333, lightgray);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: whitesmoke;
+}
+
+
+
+ul > li {
+    width: 200px;
+    height: 200px;
+    border: 3px solid #333;
+    background-color: lightgray;
+    list-style: none;
+    text-align: center;
+    text-align: left;
+    color: #333;
+}
