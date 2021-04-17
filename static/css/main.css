@@ -1,0 +1,62 @@
+body {
+    font-family: sans-serif;
+    background-color: navy;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    color: white;
+    
+} 
+
+#header {
+  
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: navy;
+    padding:3px 3px 3px 6px;
+}
+
+#site-name {
+  color: white;
+  text-align: center;
+  border: 1px solid white;
+  background-image: linear-gradient(white, navy);
+}
+
+img {
+  /* display: block;
+  margin-left: auto;
+  margin-right: auto; */
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 5px 5px 5px 5px;
+  width: 130px;
+  
+}
+
+
+
+label::after {
+    content: ":";
+  }
+
+ 
+  #top-scorers {
+    display: flex;
+    
+    list-style-type: none;
+  }
+  
+  .top-scorers-item {
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid #20437c;
+    border-radius: 5%;
+    background: #ddeaff;
+  }
+  
+  

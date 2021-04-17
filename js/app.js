@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log('JavaScript loaded');
 
@@ -19,16 +21,32 @@ const handleFormSubmit = function(event){
 
     const scorerGoals = event.target.goals.value
 
-    const listItem = document.createElement('li');
-    listItem.textContent = `${scorerName} ${team} ${scorerGoals}`
+    const topScorers = document.createElement('li');
+    topScorers.classList.add('top-scorers-item');
+    
+
+   
+    const listItem1 = document.createElement('h1');
+    listItem1.textContent = `${scorerName}`;
+
+    const listItem2 = document.createElement('h2');
+    listItem2.textContent = `${team}`;
+
+    const listItem3 = document.createElement('h3');
+    listItem3.textContent = `${scorerGoals}`
+    
     const list = document.querySelector('#top-scorers');
-    list.appendChild(listItem);
+    list.appendChild(listItem1);
+    list.appendChild(listItem2);
+    list.appendChild(listItem3);
     event.target.reset();
+
+  
 
 }
 
 const handleDeleteButtonClick = function(){
-    const buttonClick = document.querySelectorAll('li');
+    const buttonClick = document.querySelectorAll('#top-scorers');
     for (const item of buttonClick){
         item.remove();
     }
