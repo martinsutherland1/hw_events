@@ -14,31 +14,26 @@ document.addEventListener('DOMContentLoaded', () => {
 const handleFormSubmit = function(event){
     event.preventDefault();
 
-    const scorerName = event.target.name.value
-
-    let team = document.querySelector('#category');
-    team = category.value;
-
-    const scorerGoals = event.target.goals.value
-
-    const topScorers = document.createElement('li');
-    topScorers.classList.add('top-scorers-item');
     
 
-   
-    const listItem1 = document.createElement('h1');
-    listItem1.textContent = `${scorerName}`;
+    const readingListItem = document.createElement('li');
+    readingListItem.classList.add('reading-list-item');
 
-    const listItem2 = document.createElement('h2');
-    listItem2.textContent = `${team}`;
+    const name = document.createElement('h1');
+    name.textContent = event.target.name.value;
+    readingListItem.appendChild(name);
 
-    const listItem3 = document.createElement('h3');
-    listItem3.textContent = `${scorerGoals}`
-    
+    const team = document.createElement('h2');
+    team.textContent = category.value;
+    readingListItem.appendChild(team);
+
+    const goals = document.createElement('h3');
+    goals.textContent = event.target.goals.value;
+    readingListItem.appendChild(goals);
+
     const list = document.querySelector('#top-scorers');
-    list.appendChild(listItem1);
-    list.appendChild(listItem2);
-    list.appendChild(listItem3);
+    list.appendChild(readingListItem);
+    
     event.target.reset();
 
   
